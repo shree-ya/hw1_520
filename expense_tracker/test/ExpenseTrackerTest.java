@@ -21,22 +21,45 @@ public class ExpenseTrackerTest {
         app = new ExpenseTrackerApp();
     }
 
+//    @Test
+//    public void testAddTransaction() {
+//        // Create a new transaction
+//        double amount = 100.0;
+//        String category = "Food";
+//        Transaction transaction = new Transaction(amount, category);
+//
+//        // Add the transaction to the view
+//        view.addTransaction(transaction);
+//
+//        // Get the transactions from the view
+//        java.util.List<Transaction> transactions = view.getTransactions();
+//
+//        // Verify that the transaction was added
+//        assertEquals(1, transactions.size());
+//        assertEquals(amount, transactions.get(0).getAmount(), 0.001);
+//        assertEquals(category, transactions.get(0).getCategory());
+//    }
+    
     @Test
     public void testAddTransaction() {
         // Create a new transaction
         double amount = 100.0;
         String category = "Food";
-        Transaction transaction = new Transaction(amount, category);
 
-        // Add the transaction to the view
-        view.addTransaction(transaction);
+        // Check if both amount and category are valid
+            Transaction transaction = new Transaction(amount, category);
 
-        // Get the transactions from the view
-        java.util.List<Transaction> transactions = view.getTransactions();
+            // Add the transaction to the view
+            view.addTransaction(transaction);
 
-        // Verify that the transaction was added
-        assertEquals(1, transactions.size());
-        assertEquals(amount, transactions.get(0).getAmount(), 0.001);
-        assertEquals(category, transactions.get(0).getCategory());
+            // Get the transactions from the view
+            java.util.List<Transaction> transactions = view.getTransactions();
+
+            // Verify that the transaction was added
+            assertEquals(1, transactions.size());
+            assertEquals(amount, transactions.get(0).getAmount(), 0.001);
+            assertEquals(category, transactions.get(0).getCategory());
+        
     }
+
 }

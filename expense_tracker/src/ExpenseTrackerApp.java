@@ -27,12 +27,21 @@ public class ExpenseTrackerApp {
       // Get transaction data from view
       double amount = view.getAmountField(); 
       String category = view.getCategoryField();
+      boolean isAmountValid = InputValidation.isAmountValid(amount);
+      boolean isCategoryValid = InputValidation.isCategoryValid(category);
+      if (isAmountValid && isCategoryValid) {
 
       // Create transaction object
       Transaction t = new Transaction(amount, category);
 
       // Call controller to add transaction
       view.addTransaction(t);
+      } else {
+          // Handle invalid input data (e.g., show an error message)
+          // You can implement this part based on your application's requirements.
+          // For example, display an error message to the user.
+          System.out.println("Invalid input data.");
+      }
     });
 
   }
