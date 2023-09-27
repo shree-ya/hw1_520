@@ -29,6 +29,7 @@ public class ExpenseTrackerApp {
       String category = view.getCategoryField();
       boolean isAmountValid = InputValidation.isAmountValid(amount);
       boolean isCategoryValid = InputValidation.isCategoryValid(category);
+      // check if amount field and category field have valid input 
       if (isAmountValid && isCategoryValid) {
 
       // Create transaction object

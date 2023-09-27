@@ -24,6 +24,7 @@ public class ExpenseTrackerView extends JFrame {
 
   public double getAmountField() {
 	try {
+		// check if amount is there in the input, if not consider the amiunt as 0
 	    if(amountField.getText().isEmpty()) {
 	      return 0;
 	    }else {
@@ -31,6 +32,7 @@ public class ExpenseTrackerView extends JFrame {
 	    return amount;
 	    }
 	}
+	// if an exception is caught because amount is not a number, return -1 to indicate invalid input
 	catch(NumberFormatException e) {
 		return -1;
 	}
